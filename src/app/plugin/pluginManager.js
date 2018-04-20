@@ -147,7 +147,7 @@ class PluginManager {
           value: [ result ]
         }))
       }
-      if (event.type === 'message' && this.inFocus && this.plugins[this.inFocus] && this.plugins[this.inFocus].origin === event.origin) {
+      if (event.type === 'message') {
         var data = JSON.parse(event.data)
         data.value.unshift(this.inFocus)
         // if (allowedapi[data.type]) {
